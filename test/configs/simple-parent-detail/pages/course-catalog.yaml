@@ -1,0 +1,27 @@
+---
+   - name: "Course Enrollment"
+     id: course-catalog
+     shortcut: "c"
+       
+     layout:
+         - container: { dir: column }
+           containers: 
+              - container: { dir: row }
+                views:
+                  - { view: courses, fixedSize: 0, proportion: 1 } 
+                  - { view: course-info, fixedSize: 0, proportion: 1 }
+
+     views:
+       - name: Courses
+         id: courses
+         shortcut: c
+         table:
+           - headerExpression: "Course"
+             dataExpression:  "$.name"
+       - name: CourseStudents
+         shortcut: s
+         form:
+           orientation: h
+           labelExpression: "$.data"
+           dataExpression: "$.data"
+

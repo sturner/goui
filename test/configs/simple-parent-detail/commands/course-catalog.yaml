@@ -1,0 +1,6 @@
+---
+   - name: "Retrieve courses"
+     regex: "show courses"
+     shellExpression: "{{.env.CONFIG_DIR}}/ls.py"
+     resultType: "json" # or csv
+     resultKey:  "courses"

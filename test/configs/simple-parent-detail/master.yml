@@ -1,0 +1,69 @@
+
+
+name: Sample Parent Detail
+
+#page-imports: 
+#  - views
+#cmd-import:
+#  - cmds
+
+#commands: 
+#   - name: "Retrieve courses"
+#     regex: "show courses"
+#     shellExpression: "{{.env.CONFIG_DIR}}/ls.py"
+#     resultType: "json" # or csv
+#     resultKey:  "courses"
+
+#  courses: [
+#      {
+#          "id": "ENG-102",
+#          "department": "ENG", 
+#          "number": 102,
+#          "description": "Freshmen English 2",
+#          "prereqs": [
+#              {
+#                  "id": "ENG-101",
+#                  "department": "ENG",
+#                  "number": 101,
+#                  "description": "Freshmen English 1",
+#              }
+#          ]
+#      }
+#   ]
+#
+
+#   - name: "Retrieve course enrollment"
+#     regex: "show enrollment <dept> <num>"
+#     shellExpression: ""
+#     resultType: "json"
+#     resultKey: "enrollment"
+
+
+
+#pages: 
+#   - name: "Course Enrollment"
+#     id: course-catalog
+#     shortcut: "c"
+#       
+#     layout:
+#         - container: { dir: column }
+#           containers: 
+#              - container: { dir: row }
+#                views:
+#                  - { view: courses, fixedSize: 0, proportion: 1 } 
+#                  - { view: course-info, fixedSize: 0, proportion: 1 }
+#
+#     views:
+#       - name: Courses
+#         id: courses
+#         shortcut: c
+#         table:
+#           - headerExpression: "Course"
+#             dataExpression:  "$.name"
+#       - name: CourseStudents
+#         shortcut: s
+#         form:
+#           orientation: h
+#           labelExpression: "$.data"
+#           dataExpression: "$.data"
+###

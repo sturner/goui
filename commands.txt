@@ -1,0 +1,7 @@
+
+:q              -- quit the application    
+:f <x>          -- focus on view with shortcut <x>
+:c commands  -- show available commands with help
+:p              -- show available pages
+:p <name>       -- switch to page <name>
+:<regex>  <arg-1> <arg-2> ... <arg-n>  -- execute command with args
