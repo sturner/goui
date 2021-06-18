@@ -1,0 +1,801 @@
+2021/06/16 21:43:52 Loading file [./test/configs/simple-parent-detail/master.yml]
+2021/06/16 21:43:52 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/16 21:43:52 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/16 21:43:52 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/16 21:43:52 Building page [course-catalog]
+2021/06/16 21:43:52 Building view [courses]
+2021/06/16 21:43:52 Finished building view [courses]
+2021/06/16 21:43:52 Building view [classes]
+2021/06/16 21:43:52 Finished building view [classes]
+2021/06/16 21:43:52 Building view [students]
+2021/06/16 21:43:52 Building  static view
+2021/06/16 21:43:52 Finished building view [students]
+2021/06/16 21:43:52 Finished building page [course-catalog]
+2021/06/16 21:43:52 Finished building all pages [[0xc00005c640]]
+2021/06/16 21:43:52 Registering command [quit]
+2021/06/16 21:43:52 Registering command [page]
+2021/06/16 21:43:52 Registering command [focus]
+2021/06/16 21:43:52 Registering command [Retrieve courses]
+2021/06/16 21:43:52 Registering command [Retrieve classes]
+2021/06/16 21:43:52 Registering command [Show a course]
+2021/06/16 21:43:52 Building page layout [course-catalog]
+2021/06/16 21:43:52 Looking for page id [course-catalog]
+2021/06/16 21:43:52 Checking page id [course-catalog]
+2021/06/16 21:43:52 Found page [course-catalog]
+2021/06/16 21:43:52 Building layout
+2021/06/16 21:43:52 Building view layout [courses]
+2021/06/16 21:43:52 Finished view layout[courses]
+2021/06/16 21:43:52 Building container layout
+2021/06/16 21:43:52 Building layout
+2021/06/16 21:43:52 Building view layout [classes]
+2021/06/16 21:43:52 Finished view layout[classes]
+2021/06/16 21:43:52 Building view layout [students]
+2021/06/16 21:43:52 Finished view layout[students]
+2021/06/16 21:43:52 Finished layout
+2021/06/16 21:43:52 Finished container layout
+2021/06/16 21:43:52 Finished layout
+2021/06/16 21:43:52 Finished building page layout [&{Box:0xc0002148f0 items:[0xc000211890 0xc000211950] direction:1 fullScreen:false}] for page [&{Flex:0xc000211860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000210960 0xc000210ff0 0xc00020e710]}]
+2021/06/16 21:43:53 256, ':', 0
+2021/06/16 21:43:53 256, 's', 0
+2021/06/16 21:43:53 256, 'h', 0
+2021/06/16 21:43:54 256, 'o', 0
+2021/06/16 21:43:54 256, 'w', 0
+2021/06/16 21:43:54 256, ' ', 0
+2021/06/16 21:43:54 256, 'c', 0
+2021/06/16 21:43:54 256, 'o', 0
+2021/06/16 21:43:54 256, 'u', 0
+2021/06/16 21:43:54 256, 'r', 0
+2021/06/16 21:43:54 256, 's', 0
+2021/06/16 21:43:54 256, 'e', 0
+2021/06/16 21:43:54 256, ' ', 0
+2021/06/16 21:43:55 256, '1', 0
+2021/06/16 21:43:55 256, '0', 0
+2021/06/16 21:43:55 256, '0', 0
+2021/06/16 21:43:55 256, '1', 0
+2021/06/16 21:43:55 13, '\r', 0
+2021/06/16 21:43:55 Processing command [show course 1001]
+2021/06/16 21:43:55 Checking command [&{BaseCommand:0xc00005c960 SourceDataId:classes.json}]
+2021/06/16 21:43:55 checking  command [show course 1001] [show classes]
+2021/06/16 21:43:55 Checking command [&{BaseCommand:0xc00005cdc0 SourceDataId:classes.json}]
+2021/06/16 21:43:55 checking  command [show course 1001] [show course \w]
+2021/06/16 21:43:55 Passthru command [show course 1001]
+2021/06/16 21:43:55 Passthru command data [classes.json]
+2021/06/16 21:43:55 Passthru data [[map[class_id:1001 course_id:1001 location:ENG-256 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]] teacher:John Jones] map[class_id:1002 course_id:1001 location:ENG-103 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1003 course_id:1002 location:ENG-105 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1004 course_id:1002 location:ENG-210 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]]]]
+2021/06/16 21:43:55 Filtering data [[map[class_id:1001 course_id:1001 location:ENG-256 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]] teacher:John Jones] map[class_id:1002 course_id:1001 location:ENG-103 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1003 course_id:1002 location:ENG-105 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1004 course_id:1002 location:ENG-210 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]]]]
+2021/06/16 21:43:55 JqFilter [&{code:0xc00005cd70}]
+2021/06/16 21:43:55 JqFilter data [[map[class_id:1001 course_id:1001 location:ENG-256 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]] teacher:John Jones] map[class_id:1002 course_id:1001 location:ENG-103 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1003 course_id:1002 location:ENG-105 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1004 course_id:1002 location:ENG-210 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]]]]
+2021/06/16 21:43:55 JqFilter results [[]]
+2021/06/16 21:43:55 Filtered data [[]]
+2021/06/16 21:43:55 Passthru result [&{Type:0 Data:[] Key:courseInfo ViewId:classes}]
+2021/06/16 21:43:55 Command results: [[]]
+2021/06/16 21:43:55 Drawing table
+2021/06/16 21:43:55 Execute: {Context:0xc000211080 Command:<nil>}
+2021/06/16 21:43:55 Execute: {Context:0xc000211080 Command:<nil>}
+2021/06/16 21:43:55 Looking for page shortcut [cc]
+2021/06/16 21:43:55 Checking page shortcut [cc]
+2021/06/16 21:43:55 Found page [&{Flex:0xc000211860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000210960 0xc000210ff0 0xc00020e710]}]
+2021/06/16 21:43:55 Focusing on page [course-catalog]
+2021/06/16 21:43:55 Looking for page id [course-catalog]
+2021/06/16 21:43:55 Checking page id [course-catalog]
+2021/06/16 21:43:55 Found page [course-catalog]
+2021/06/16 21:43:55 Got page [&{Flex:0xc000211860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000210960 0xc000210ff0 0xc00020e710]}]
+2021/06/16 21:43:55 Got page view  [&{Table:0xc000216000 BaseView:0xc0002064c0 dataPath:0xc00000eb98 columns:[0xc00020e410 0xc00020e4a0]}]
+2021/06/16 21:43:55 Got page view  [&{Table:0xc0002160f0 BaseView:0xc000206700 dataPath:0xc00000ebd8 columns:[0xc00020e5c0 0xc00020e650]}]
+2021/06/16 21:43:55 Found page view [&{Table:0xc0002160f0 BaseView:0xc000206700 dataPath:0xc00000ebd8 columns:[0xc00020e5c0 0xc00020e650]}], setting focus
+2021/06/16 21:43:55 Got page view  [&{TextView:0xc0001e2100 BaseView:0xc000206740}]
+2021/06/17 12:14:22 13, '\r', 0
+2021/06/17 12:14:22 256, ':', 0
+2021/06/17 12:14:23 256, 'q', 0
+2021/06/17 12:14:23 13, '\r', 0
+2021/06/17 12:14:23 Processing command [q]
+2021/06/17 12:14:23 Checking command [&{BaseCommand:0xc00005c8c0 SourceDataId:courses.json}]
+2021/06/17 12:14:23 checking  command [q] [show courses]
+2021/06/17 12:14:23 Checking command [&{BaseCommand:0xc00005c960 SourceDataId:classes.json}]
+2021/06/17 12:14:23 checking  command [q] [show classes]
+2021/06/17 12:14:23 Checking command [&{BaseCommand:0xc00005cdc0 SourceDataId:classes.json}]
+2021/06/17 12:14:23 checking  command [q] [show course \w]
+2021/06/17 12:14:23 Checking command [&{BaseCommand:0xc00005c6e0}]
+2021/06/17 12:14:23 checking  command [q] [q]
+2021/06/17 12:14:23 Quitting application
+2021/06/17 12:25:34 checking  command [show window] [show window]
+2021/06/17 12:25:34 Execute: {Context:0xc0001c0cf0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:25:34 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:25:34 EmptyFilter
+2021/06/17 12:25:34 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:25:34 JqFilter [&{code:0xc00005c870}]
+2021/06/17 12:25:34 JqFilter data [<nil>]
+2021/06/17 12:25:34 JqFilter results [[<nil>]]
+2021/06/17 12:25:34 JqFilter [&{code:0xc00005c870}]
+2021/06/17 12:25:34 JqFilter data [<nil>]
+2021/06/17 12:25:34 JqFilter results [[<nil>]]
+2021/06/17 12:25:34 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:25:34 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:25:34 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:25:34 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:25:34 Loading file [test/jq-test.yaml]
+2021/06/17 12:26:08 checking  command [show window] [show window]
+2021/06/17 12:26:08 Execute: {Context:0xc0001c0cf0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:26:08 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:26:08 EmptyFilter
+2021/06/17 12:26:08 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:26:08 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:26:08 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:26:08 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:26:08 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:26:08 JqFilter [&{code:0xc00005d180}]
+2021/06/17 12:26:08 JqFilter data [<nil>]
+2021/06/17 12:26:08 JqFilter results [[<nil>]]
+2021/06/17 12:26:08 JqFilter [&{code:0xc00005d180}]
+2021/06/17 12:26:08 JqFilter data [<nil>]
+2021/06/17 12:26:08 JqFilter results [[<nil>]]
+2021/06/17 12:35:16 checking  command [show window] [show window]
+2021/06/17 12:35:16 Execute: {Context:0xc0001c0cf0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:35:16 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:35:16 EmptyFilter
+2021/06/17 12:35:16 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:35:16 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:35:16 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:35:16 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:35:16 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:35:16 Invalid filter expression unexpected token "'"
+2021/06/17 12:35:21 checking  command [show window] [show window]
+2021/06/17 12:35:21 Execute: {Context:0xc0001c0cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:35:21 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:35:21 EmptyFilter
+2021/06/17 12:35:21 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:35:21 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:35:21 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:35:21 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:35:21 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:35:21 Invalid filter expression unexpected token "'"
+2021/06/17 12:35:52 checking  command [show window] [show window]
+2021/06/17 12:35:52 Execute: {Context:0xc000190cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:35:52 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:35:52 EmptyFilter
+2021/06/17 12:35:52 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:35:52 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:35:52 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:35:52 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:35:52 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:35:52 Invalid filter expression unexpected token "'"
+2021/06/17 12:36:29 checking  command [show window] [show window]
+2021/06/17 12:36:29 Execute: {Context:0xc0001c0cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:36:29 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:36:29 EmptyFilter
+2021/06/17 12:36:29 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:36:29 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:36:29 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:36:29 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:36:29 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:36:29 Invalid filter expression unexpected token "'"
+2021/06/17 12:37:02 checking  command [show window] [show window]
+2021/06/17 12:37:02 Execute: {Context:0xc0001c0cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:37:02 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:37:02 EmptyFilter
+2021/06/17 12:37:02 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:37:02 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:37:02 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:37:02 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:37:02 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:37:02 Invalid filter expression unexpected token "'"
+2021/06/17 12:40:12 checking  command [show window] [show window]
+2021/06/17 12:40:12 Execute: {Context:0xc0001c0cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:40:12 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:40:12 EmptyFilter
+2021/06/17 12:40:12 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:40:12 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:40:12 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:40:12 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:40:12 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:40:12 Invalid filter expression unexpected token "'"
+2021/06/17 12:40:27 checking  command [show window] [show window]
+2021/06/17 12:40:27 Execute: {Context:0xc000190cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:40:27 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:40:27 EmptyFilter
+2021/06/17 12:40:27 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:40:27 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:40:27 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:40:27 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:40:27 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:40:27 Invalid filter expression unexpected token "'"
+2021/06/17 12:42:16 checking  command [show window] [show window]
+2021/06/17 12:42:16 Execute: {Context:0xc0001c0cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:42:16 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:42:16 EmptyFilter
+2021/06/17 12:42:16 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:42:16 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:42:16 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:42:16 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:42:16 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:42:16 Invalid filter expression unexpected token "'"
+2021/06/17 12:42:55 checking  command [show window] [show window]
+2021/06/17 12:42:55 Execute: {Context:0xc0001c0cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:42:55 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:42:55 EmptyFilter
+2021/06/17 12:42:55 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:42:55 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:42:55 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:42:55 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:42:55 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:42:55 Invalid filter expression unexpected token "'"
+2021/06/17 12:45:15 checking  command [show window] [show window]
+2021/06/17 12:45:15 Execute: {Context:0xc0001c0cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:45:15 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:45:15 EmptyFilter
+2021/06/17 12:45:15 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:45:15 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:45:15 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:45:15 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:45:15 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:45:15 Invalid filter expression unexpected token "'"
+2021/06/17 12:45:38 checking  command [show window] [show window]
+2021/06/17 12:45:38 Execute: {Context:0xc0001fecc0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:45:38 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:45:38 EmptyFilter
+2021/06/17 12:45:38 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:45:38 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:45:38 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:45:38 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:45:38 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:45:38 JqFilter [&{code:0xc00013cb40}]
+2021/06/17 12:45:38 JqFilter data [[map[foo:hello] map[foo:there]]]
+2021/06/17 12:45:38 JqFilter results [[]]
+2021/06/17 12:46:31 checking  command [show window] [show window]
+2021/06/17 12:46:31 Execute: {Context:0xc000190cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:46:31 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:46:31 EmptyFilter
+2021/06/17 12:46:31 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:46:31 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:46:31 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:46:31 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:46:31 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:46:31 JqFilter [&{code:0xc0000ceb40}]
+2021/06/17 12:46:31 JqFilter data [[map[foo:hello] map[foo:there]]]
+2021/06/17 12:46:31 JqFilter results [[]]
+2021/06/17 12:46:56 checking  command [show window] [show window]
+2021/06/17 12:46:56 Execute: {Context:0xc0001c0cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 12:46:56 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:46:56 EmptyFilter
+2021/06/17 12:46:56 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 12:46:56 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 12:46:56 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 12:46:56 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 12:46:56 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 12:46:56 JqFilter [&{code:0xc00005cb90}]
+2021/06/17 12:46:56 JqFilter data [[map[foo:hello] map[foo:there]]]
+2021/06/17 12:46:56 JqFilter results [[map[foo:hello]]]
+2021/06/17 16:11:30 checking  command [show window] [show window]
+2021/06/17 16:11:30 Execute: {Context:0xc0001f6c60 Command:{Args:[shell_result.json]}}
+2021/06/17 16:11:30 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 16:11:30 EmptyFilter
+2021/06/17 16:11:30 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 16:11:30 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 16:11:30 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 16:11:30 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 16:11:30 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 16:11:30 JqFilter [&{code:0xc000134be0}]
+2021/06/17 16:11:30 JqFilter data [[map[foo:hello] map[foo:there]]]
+2021/06/17 16:11:30 JqFilter results [[map[foo:hello]]]
+2021/06/17 16:11:41 checking  command [show window] [show window]
+2021/06/17 16:11:41 Execute: {Context:0xc0001c0cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 16:11:41 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 16:11:41 EmptyFilter
+2021/06/17 16:11:41 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 16:11:41 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 16:11:41 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 16:11:41 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 16:11:41 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 16:11:41 JqFilter [&{code:0xc00005cc30}]
+2021/06/17 16:11:41 JqFilter data [[map[foo:hello] map[foo:there]]]
+2021/06/17 16:11:41 JqFilter results [[]]
+2021/06/17 16:11:48 checking  command [show window] [show window]
+2021/06/17 16:11:48 Execute: {Context:0xc0001c0cc0 Command:{Args:[shell_result.json]}}
+2021/06/17 16:11:48 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 16:11:48 EmptyFilter
+2021/06/17 16:11:48 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 16:11:48 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 16:11:48 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 16:11:48 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 16:11:48 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 16:11:48 JqFilter [&{code:0xc00005cc30}]
+2021/06/17 16:11:48 JqFilter data [[map[foo:hello] map[foo:there]]]
+2021/06/17 16:11:48 JqFilter results [[map[foo:hello]]]
+2021/06/17 16:13:26 Loading file [./test/configs/simple-parent-detail/master.yml]
+2021/06/17 16:13:26 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 16:13:26 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 16:13:26 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 16:13:26 Building page [course-catalog]
+2021/06/17 16:13:26 Building view [courses]
+2021/06/17 16:13:26 Finished building view [courses]
+2021/06/17 16:13:26 Building view [classes]
+2021/06/17 16:13:26 Finished building view [classes]
+2021/06/17 16:13:26 Building view [students]
+2021/06/17 16:13:26 Building  static view
+2021/06/17 16:13:26 Finished building view [students]
+2021/06/17 16:13:26 Finished building page [course-catalog]
+2021/06/17 16:13:26 Finished building all pages [[0xc00005c640]]
+2021/06/17 16:13:26 Registering command [quit]
+2021/06/17 16:13:26 Registering command [page]
+2021/06/17 16:13:26 Registering command [focus]
+2021/06/17 16:13:26 Registering command [Retrieve courses]
+2021/06/17 16:13:26 Registering command [Retrieve classes]
+2021/06/17 16:13:26 Registering command [Show a course]
+2021/06/17 16:13:26 Building page layout [course-catalog]
+2021/06/17 16:13:26 Looking for page id [course-catalog]
+2021/06/17 16:13:26 Checking page id [course-catalog]
+2021/06/17 16:13:26 Found page [course-catalog]
+2021/06/17 16:13:26 Building layout
+2021/06/17 16:13:26 Building view layout [courses]
+2021/06/17 16:13:26 Finished view layout[courses]
+2021/06/17 16:13:26 Building container layout
+2021/06/17 16:13:26 Building layout
+2021/06/17 16:13:26 Building view layout [classes]
+2021/06/17 16:13:26 Finished view layout[classes]
+2021/06/17 16:13:26 Building view layout [students]
+2021/06/17 16:13:26 Finished view layout[students]
+2021/06/17 16:13:26 Finished layout
+2021/06/17 16:13:26 Finished container layout
+2021/06/17 16:13:26 Finished layout
+2021/06/17 16:13:26 Finished building page layout [&{Box:0xc000216a90 items:[0xc000213890 0xc000213950] direction:1 fullScreen:false}] for page [&{Flex:0xc000213860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000212960 0xc000212ff0 0xc0002106f0]}]
+2021/06/17 16:13:27 256, ':', 0
+2021/06/17 16:13:27 256, 's', 0
+2021/06/17 16:13:27 256, 'h', 0
+2021/06/17 16:13:27 256, 'o', 0
+2021/06/17 16:13:28 256, 'w', 0
+2021/06/17 16:13:28 256, ' ', 0
+2021/06/17 16:13:28 256, 'c', 0
+2021/06/17 16:13:28 256, 'o', 0
+2021/06/17 16:13:28 256, 'u', 0
+2021/06/17 16:13:28 256, 'r', 0
+2021/06/17 16:13:28 256, 's', 0
+2021/06/17 16:13:28 256, 'e', 0
+2021/06/17 16:13:29 256, 's', 0
+2021/06/17 16:13:29 13, '\r', 0
+2021/06/17 16:13:29 Processing command [show courses]
+2021/06/17 16:13:29 Checking command [&{BaseCommand:0xc00005c6e0}]
+2021/06/17 16:13:29 checking  command [show courses] [q]
+2021/06/17 16:13:29 Checking command [&{BaseCommand:0xc00005c780}]
+2021/06/17 16:13:29 checking  command [show courses] [p]
+2021/06/17 16:13:29 Checking command [&{BaseCommand:0xc00005c820}]
+2021/06/17 16:13:29 checking  command [show courses] [f]
+2021/06/17 16:13:29 Checking command [&{BaseCommand:0xc00005c8c0 SourceDataId:courses.json}]
+2021/06/17 16:13:29 checking  command [show courses] [show courses]
+2021/06/17 16:13:29 Passthru command [show courses]
+2021/06/17 16:13:29 Passthru command data [courses.json]
+2021/06/17 16:13:29 Passthru data [[map[course_id:1001 department:ENG number:101] map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]] map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]] map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]]]
+2021/06/17 16:13:29 Filtering data [[map[course_id:1001 department:ENG number:101] map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]] map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]] map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]]]
+2021/06/17 16:13:29 EmptyFilter
+2021/06/17 16:13:29 Filtered data [[map[course_id:1001 department:ENG number:101] map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]] map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]] map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]]]
+2021/06/17 16:13:29 Passthru result [&{Type:0 Data:[map[course_id:1001 department:ENG number:101] map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]] map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]] map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]] Key:courses ViewId:courses}]
+2021/06/17 16:13:29 Command results: [[map[course_id:1001 department:ENG number:101] map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]] map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]] map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]]]
+2021/06/17 16:13:29 Drawing table
+2021/06/17 16:13:29 Execute: {Context:0xc000213080 Command:<nil>}
+2021/06/17 16:13:29 Execute: {Context:0xc000213080 Command:<nil>}
+2021/06/17 16:13:29 Execute: map[course_id:1001 department:ENG number:101]
+2021/06/17 16:13:29 Execute: map[course_id:1001 department:ENG number:101]
+2021/06/17 16:13:29 Execute: map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]]
+2021/06/17 16:13:29 Execute: map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]]
+2021/06/17 16:13:29 Execute: map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]]
+2021/06/17 16:13:29 Execute: map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]]
+2021/06/17 16:13:29 Execute: map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]
+2021/06/17 16:13:29 Execute: map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]
+2021/06/17 16:13:29 Looking for page shortcut [cc]
+2021/06/17 16:13:29 Checking page shortcut [cc]
+2021/06/17 16:13:29 Found page [&{Flex:0xc000213860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000212960 0xc000212ff0 0xc0002106f0]}]
+2021/06/17 16:13:29 Focusing on page [course-catalog]
+2021/06/17 16:13:29 Looking for page id [course-catalog]
+2021/06/17 16:13:29 Checking page id [course-catalog]
+2021/06/17 16:13:29 Found page [course-catalog]
+2021/06/17 16:13:29 Got page [&{Flex:0xc000213860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000212960 0xc000212ff0 0xc0002106f0]}]
+2021/06/17 16:13:29 Got page view  [&{Table:0xc000218000 BaseView:0xc0002064c0 dataPath:0xc00000eb90 columns:[0xc0002103f0 0xc000210480]}]
+2021/06/17 16:13:29 Found page view [&{Table:0xc000218000 BaseView:0xc0002064c0 dataPath:0xc00000eb90 columns:[0xc0002103f0 0xc000210480]}], setting focus
+2021/06/17 16:13:29 Got page view  [&{Table:0xc0002180f0 BaseView:0xc000206700 dataPath:0xc00000ebd0 columns:[0xc0002105a0 0xc000210630]}]
+2021/06/17 16:13:29 Got page view  [&{TextView:0xc0001e2100 BaseView:0xc000206740}]
+2021/06/17 16:13:30 256, 'j', 0
+2021/06/17 16:13:30 256, 'j', 0
+2021/06/17 16:13:31 256, 'j', 0
+2021/06/17 16:13:31 256, 'k', 0
+2021/06/17 16:13:31 256, 'k', 0
+2021/06/17 16:13:32 256, ':', 0
+2021/06/17 16:13:32 256, 's', 0
+2021/06/17 16:13:32 256, 'h', 0
+2021/06/17 16:13:32 256, 'o', 0
+2021/06/17 16:13:32 256, 'w', 0
+2021/06/17 16:13:32 256, ' ', 0
+2021/06/17 16:13:32 256, 'c', 0
+2021/06/17 16:13:32 256, 'o', 0
+2021/06/17 16:13:32 256, 'u', 0
+2021/06/17 16:13:33 256, 'r', 0
+2021/06/17 16:13:33 256, 's', 0
+2021/06/17 16:13:33 256, 'e', 0
+2021/06/17 16:13:33 256, ' ', 0
+2021/06/17 16:13:33 256, '1', 0
+2021/06/17 16:13:33 256, '0', 0
+2021/06/17 16:13:33 256, '0', 0
+2021/06/17 16:13:33 256, '1', 0
+2021/06/17 16:13:34 13, '\r', 0
+2021/06/17 16:13:34 Processing command [show course 1001]
+2021/06/17 16:13:34 Checking command [&{BaseCommand:0xc00005c780}]
+2021/06/17 16:13:34 checking  command [show course 1001] [p]
+2021/06/17 16:13:34 Checking command [&{BaseCommand:0xc00005c820}]
+2021/06/17 16:13:34 checking  command [show course 1001] [f]
+2021/06/17 16:13:34 Checking command [&{BaseCommand:0xc00005c8c0 SourceDataId:courses.json}]
+2021/06/17 16:13:34 checking  command [show course 1001] [show courses]
+2021/06/17 16:13:34 Checking command [&{BaseCommand:0xc00005c960 SourceDataId:classes.json}]
+2021/06/17 16:13:34 checking  command [show course 1001] [show classes]
+2021/06/17 16:13:34 Checking command [&{BaseCommand:0xc00005cdc0 SourceDataId:classes.json}]
+2021/06/17 16:13:34 checking  command [show course 1001] [show course \w]
+2021/06/17 16:13:34 Passthru command [show course 1001]
+2021/06/17 16:13:34 Passthru command data [classes.json]
+2021/06/17 16:13:34 Passthru data [[map[class_id:1001 course_id:1001 location:ENG-256 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]] teacher:John Jones] map[class_id:1002 course_id:1001 location:ENG-103 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1003 course_id:1002 location:ENG-105 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1004 course_id:1002 location:ENG-210 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]]]]
+2021/06/17 16:13:34 Filtering data [[map[class_id:1001 course_id:1001 location:ENG-256 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]] teacher:John Jones] map[class_id:1002 course_id:1001 location:ENG-103 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1003 course_id:1002 location:ENG-105 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1004 course_id:1002 location:ENG-210 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]]]]
+2021/06/17 16:13:34 JqFilter [&{code:0xc00005cd70}]
+2021/06/17 16:13:34 JqFilter data [[map[class_id:1001 course_id:1001 location:ENG-256 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]] teacher:John Jones] map[class_id:1002 course_id:1001 location:ENG-103 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1003 course_id:1002 location:ENG-105 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1004 course_id:1002 location:ENG-210 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]]]]
+2021/06/17 16:13:34 JqFilter results [[]]
+2021/06/17 16:13:34 Filtered data [[]]
+2021/06/17 16:13:34 Passthru result [&{Type:0 Data:[] Key:courseInfo ViewId:classes}]
+2021/06/17 16:13:34 Command results: [[]]
+2021/06/17 16:13:34 Drawing table
+2021/06/17 16:13:34 Execute: {Context:0xc000213080 Command:<nil>}
+2021/06/17 16:13:34 Execute: {Context:0xc000213080 Command:<nil>}
+2021/06/17 16:13:34 Looking for page shortcut [cc]
+2021/06/17 16:13:34 Checking page shortcut [cc]
+2021/06/17 16:13:34 Found page [&{Flex:0xc000213860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000212960 0xc000212ff0 0xc0002106f0]}]
+2021/06/17 16:13:34 Focusing on page [course-catalog]
+2021/06/17 16:13:34 Looking for page id [course-catalog]
+2021/06/17 16:13:34 Checking page id [course-catalog]
+2021/06/17 16:13:34 Found page [course-catalog]
+2021/06/17 16:13:34 Got page [&{Flex:0xc000213860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000212960 0xc000212ff0 0xc0002106f0]}]
+2021/06/17 16:13:34 Got page view  [&{Table:0xc000218000 BaseView:0xc0002064c0 dataPath:0xc00000eb90 columns:[0xc0002103f0 0xc000210480]}]
+2021/06/17 16:13:34 Got page view  [&{Table:0xc0002180f0 BaseView:0xc000206700 dataPath:0xc00000ebd0 columns:[0xc0002105a0 0xc000210630]}]
+2021/06/17 16:13:34 Found page view [&{Table:0xc0002180f0 BaseView:0xc000206700 dataPath:0xc00000ebd0 columns:[0xc0002105a0 0xc000210630]}], setting focus
+2021/06/17 16:13:34 Got page view  [&{TextView:0xc0001e2100 BaseView:0xc000206740}]
+2021/06/17 16:13:57 256, ':', 0
+2021/06/17 16:13:58 256, 'q', 0
+2021/06/17 16:13:58 13, '\r', 0
+2021/06/17 16:13:58 Processing command [q]
+2021/06/17 16:13:58 Checking command [&{BaseCommand:0xc00005c820}]
+2021/06/17 16:13:58 checking  command [q] [f]
+2021/06/17 16:13:58 Checking command [&{BaseCommand:0xc00005c8c0 SourceDataId:courses.json}]
+2021/06/17 16:13:58 checking  command [q] [show courses]
+2021/06/17 16:13:58 Checking command [&{BaseCommand:0xc00005c960 SourceDataId:classes.json}]
+2021/06/17 16:13:58 checking  command [q] [show classes]
+2021/06/17 16:13:58 Checking command [&{BaseCommand:0xc00005cdc0 SourceDataId:classes.json}]
+2021/06/17 16:13:58 checking  command [q] [show course \w]
+2021/06/17 16:13:58 Checking command [&{BaseCommand:0xc00005c6e0}]
+2021/06/17 16:13:58 checking  command [q] [q]
+2021/06/17 16:13:58 Quitting application
+2021/06/17 16:15:02 Loading file [./test/configs/simple-parent-detail/master.yml]
+2021/06/17 16:15:02 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 16:15:02 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 16:15:02 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 16:15:02 Building page [course-catalog]
+2021/06/17 16:15:02 Building view [courses]
+2021/06/17 16:15:02 Finished building view [courses]
+2021/06/17 16:15:02 Building view [classes]
+2021/06/17 16:15:02 Finished building view [classes]
+2021/06/17 16:15:02 Building view [students]
+2021/06/17 16:15:02 Building  static view
+2021/06/17 16:15:02 Finished building view [students]
+2021/06/17 16:15:02 Finished building page [course-catalog]
+2021/06/17 16:15:02 Finished building all pages [[0xc00005c640]]
+2021/06/17 16:15:02 Registering command [quit]
+2021/06/17 16:15:02 Registering command [page]
+2021/06/17 16:15:02 Registering command [focus]
+2021/06/17 16:15:02 Registering command [Retrieve courses]
+2021/06/17 16:15:02 Registering command [Retrieve classes]
+2021/06/17 16:15:02 Registering command [Show a course]
+2021/06/17 16:15:02 Building page layout [course-catalog]
+2021/06/17 16:15:02 Looking for page id [course-catalog]
+2021/06/17 16:15:02 Checking page id [course-catalog]
+2021/06/17 16:15:02 Found page [course-catalog]
+2021/06/17 16:15:02 Building layout
+2021/06/17 16:15:02 Building view layout [courses]
+2021/06/17 16:15:02 Finished view layout[courses]
+2021/06/17 16:15:02 Building container layout
+2021/06/17 16:15:02 Building layout
+2021/06/17 16:15:02 Building view layout [classes]
+2021/06/17 16:15:02 Finished view layout[classes]
+2021/06/17 16:15:02 Building view layout [students]
+2021/06/17 16:15:02 Finished view layout[students]
+2021/06/17 16:15:02 Finished layout
+2021/06/17 16:15:02 Finished container layout
+2021/06/17 16:15:02 Finished layout
+2021/06/17 16:15:02 Finished building page layout [&{Box:0xc000216b60 items:[0xc000213890 0xc000213950] direction:1 fullScreen:false}] for page [&{Flex:0xc000213860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000212960 0xc000212ff0 0xc0002106d0]}]
+2021/06/17 16:15:03 256, ':', 0
+2021/06/17 16:15:03 256, 's', 0
+2021/06/17 16:15:03 256, 'h', 0
+2021/06/17 16:15:03 256, 'o', 0
+2021/06/17 16:15:03 256, 'w', 0
+2021/06/17 16:15:04 256, ' ', 0
+2021/06/17 16:15:04 256, 'c', 0
+2021/06/17 16:15:04 256, 'o', 0
+2021/06/17 16:15:04 256, 'u', 0
+2021/06/17 16:15:04 256, 'r', 0
+2021/06/17 16:15:04 256, 's', 0
+2021/06/17 16:15:04 256, 'e', 0
+2021/06/17 16:15:04 256, 's', 0
+2021/06/17 16:15:04 13, '\r', 0
+2021/06/17 16:15:04 Processing command [show courses]
+2021/06/17 16:15:04 Checking command [&{BaseCommand:0xc00005c6e0}]
+2021/06/17 16:15:04 checking  command [show courses] [q]
+2021/06/17 16:15:04 Checking command [&{BaseCommand:0xc00005c780}]
+2021/06/17 16:15:04 checking  command [show courses] [p]
+2021/06/17 16:15:04 Checking command [&{BaseCommand:0xc00005c820}]
+2021/06/17 16:15:04 checking  command [show courses] [f]
+2021/06/17 16:15:04 Checking command [&{BaseCommand:0xc00005c8c0 SourceDataId:courses.json}]
+2021/06/17 16:15:04 checking  command [show courses] [show courses]
+2021/06/17 16:15:04 Passthru command [show courses]
+2021/06/17 16:15:04 Passthru command data [courses.json]
+2021/06/17 16:15:04 Passthru data [[map[course_id:1001 department:ENG number:101] map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]] map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]] map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]]]
+2021/06/17 16:15:04 Filtering data [[map[course_id:1001 department:ENG number:101] map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]] map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]] map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]]]
+2021/06/17 16:15:04 EmptyFilter
+2021/06/17 16:15:04 Filtered data [[map[course_id:1001 department:ENG number:101] map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]] map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]] map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]]]
+2021/06/17 16:15:04 Passthru result [&{Type:0 Data:[map[course_id:1001 department:ENG number:101] map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]] map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]] map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]] Key:courses ViewId:courses}]
+2021/06/17 16:15:04 Command results: [[map[course_id:1001 department:ENG number:101] map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]] map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]] map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]]]
+2021/06/17 16:15:04 Drawing table
+2021/06/17 16:15:04 Execute: {Context:0xc000213080 Command:<nil>}
+2021/06/17 16:15:04 Execute: {Context:0xc000213080 Command:<nil>}
+2021/06/17 16:15:04 Execute: map[course_id:1001 department:ENG number:101]
+2021/06/17 16:15:04 Execute: map[course_id:1001 department:ENG number:101]
+2021/06/17 16:15:04 Execute: map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]]
+2021/06/17 16:15:04 Execute: map[course_id:1003 department:ENG number:102 prerequisites:[map[course_id:1001]]]
+2021/06/17 16:15:04 Execute: map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]]
+2021/06/17 16:15:04 Execute: map[course_id:1002 department:ENG number:201 prerequisites:[map[course_id:1003]]]
+2021/06/17 16:15:04 Execute: map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]
+2021/06/17 16:15:04 Execute: map[course_id:1004 department:ENG number:202 prerequisites:[map[course_id:1002]]]
+2021/06/17 16:15:04 Looking for page shortcut [cc]
+2021/06/17 16:15:04 Checking page shortcut [cc]
+2021/06/17 16:15:04 Found page [&{Flex:0xc000213860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000212960 0xc000212ff0 0xc0002106d0]}]
+2021/06/17 16:15:04 Focusing on page [course-catalog]
+2021/06/17 16:15:04 Looking for page id [course-catalog]
+2021/06/17 16:15:04 Checking page id [course-catalog]
+2021/06/17 16:15:04 Found page [course-catalog]
+2021/06/17 16:15:04 Got page [&{Flex:0xc000213860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000212960 0xc000212ff0 0xc0002106d0]}]
+2021/06/17 16:15:04 Got page view  [&{Table:0xc000218000 BaseView:0xc000206480 dataPath:0xc00000eb48 columns:[0xc0002103d0 0xc000210460]}]
+2021/06/17 16:15:04 Found page view [&{Table:0xc000218000 BaseView:0xc000206480 dataPath:0xc00000eb48 columns:[0xc0002103d0 0xc000210460]}], setting focus
+2021/06/17 16:15:04 Got page view  [&{Table:0xc0002180f0 BaseView:0xc0002066c0 dataPath:0xc00000eb88 columns:[0xc000210580 0xc000210610]}]
+2021/06/17 16:15:04 Got page view  [&{TextView:0xc0001e2100 BaseView:0xc000206700}]
+2021/06/17 16:15:06 256, ':', 0
+2021/06/17 16:15:06 256, 's', 0
+2021/06/17 16:15:06 256, 'h', 0
+2021/06/17 16:15:06 256, 'o', 0
+2021/06/17 16:15:06 256, 'w', 0
+2021/06/17 16:15:06 256, ' ', 0
+2021/06/17 16:15:06 256, 's', 0
+2021/06/17 16:15:07 127, '\u007f', 0
+2021/06/17 16:15:07 256, 'c', 0
+2021/06/17 16:15:07 256, 'o', 0
+2021/06/17 16:15:07 256, 'u', 0
+2021/06/17 16:15:07 256, 'r', 0
+2021/06/17 16:15:07 256, 's', 0
+2021/06/17 16:15:07 256, 'e', 0
+2021/06/17 16:15:07 256, ' ', 0
+2021/06/17 16:15:08 256, '1', 0
+2021/06/17 16:15:08 256, '0', 0
+2021/06/17 16:15:08 256, '0', 0
+2021/06/17 16:15:08 256, '1', 0
+2021/06/17 16:15:09 13, '\r', 0
+2021/06/17 16:15:09 Processing command [show course 1001]
+2021/06/17 16:15:09 Checking command [&{BaseCommand:0xc00005c820}]
+2021/06/17 16:15:09 checking  command [show course 1001] [f]
+2021/06/17 16:15:09 Checking command [&{BaseCommand:0xc00005c8c0 SourceDataId:courses.json}]
+2021/06/17 16:15:09 checking  command [show course 1001] [show courses]
+2021/06/17 16:15:09 Checking command [&{BaseCommand:0xc00005c960 SourceDataId:classes.json}]
+2021/06/17 16:15:09 checking  command [show course 1001] [show classes]
+2021/06/17 16:15:09 Checking command [&{BaseCommand:0xc00005cdc0 SourceDataId:classes.json}]
+2021/06/17 16:15:09 checking  command [show course 1001] [show course \w]
+2021/06/17 16:15:09 Passthru command [show course 1001]
+2021/06/17 16:15:09 Passthru command data [classes.json]
+2021/06/17 16:15:09 Passthru data [[map[class_id:1001 course_id:1001 location:ENG-256 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]] teacher:John Jones] map[class_id:1002 course_id:1001 location:ENG-103 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1003 course_id:1002 location:ENG-105 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1004 course_id:1002 location:ENG-210 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]]]]
+2021/06/17 16:15:09 Filtering data [[map[class_id:1001 course_id:1001 location:ENG-256 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]] teacher:John Jones] map[class_id:1002 course_id:1001 location:ENG-103 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1003 course_id:1002 location:ENG-105 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1004 course_id:1002 location:ENG-210 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]]]]
+2021/06/17 16:15:09 JqFilter [&{code:0xc00005cd70}]
+2021/06/17 16:15:09 JqFilter data [[map[class_id:1001 course_id:1001 location:ENG-256 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]] teacher:John Jones] map[class_id:1002 course_id:1001 location:ENG-103 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1003 course_id:1002 location:ENG-105 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1004 course_id:1002 location:ENG-210 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]]]]
+2021/06/17 16:15:09 JqFilter results [[]]
+2021/06/17 16:15:09 Filtered data [[]]
+2021/06/17 16:15:09 Passthru result [&{Type:0 Data:[] Key:courseInfo ViewId:classes}]
+2021/06/17 16:15:09 Command results: [[]]
+2021/06/17 16:15:09 Drawing table
+2021/06/17 16:15:09 Execute: {Context:0xc000213080 Command:<nil>}
+2021/06/17 16:15:09 Execute: {Context:0xc000213080 Command:<nil>}
+2021/06/17 16:15:09 Looking for page shortcut [cc]
+2021/06/17 16:15:09 Checking page shortcut [cc]
+2021/06/17 16:15:09 Found page [&{Flex:0xc000213860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000212960 0xc000212ff0 0xc0002106d0]}]
+2021/06/17 16:15:09 Focusing on page [course-catalog]
+2021/06/17 16:15:09 Looking for page id [course-catalog]
+2021/06/17 16:15:09 Checking page id [course-catalog]
+2021/06/17 16:15:09 Found page [course-catalog]
+2021/06/17 16:15:09 Got page [&{Flex:0xc000213860 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc000212960 0xc000212ff0 0xc0002106d0]}]
+2021/06/17 16:15:09 Got page view  [&{Table:0xc000218000 BaseView:0xc000206480 dataPath:0xc00000eb48 columns:[0xc0002103d0 0xc000210460]}]
+2021/06/17 16:15:09 Got page view  [&{Table:0xc0002180f0 BaseView:0xc0002066c0 dataPath:0xc00000eb88 columns:[0xc000210580 0xc000210610]}]
+2021/06/17 16:15:09 Found page view [&{Table:0xc0002180f0 BaseView:0xc0002066c0 dataPath:0xc00000eb88 columns:[0xc000210580 0xc000210610]}], setting focus
+2021/06/17 16:15:09 Got page view  [&{TextView:0xc0001e2100 BaseView:0xc000206700}]
+2021/06/17 16:15:41 13, '\r', 0
+2021/06/17 16:15:41 256, ':', 0
+2021/06/17 16:15:41 256, 'q', 0
+2021/06/17 16:15:42 13, '\r', 0
+2021/06/17 16:15:42 Processing command [q]
+2021/06/17 16:15:42 Checking command [&{BaseCommand:0xc00005c820}]
+2021/06/17 16:15:42 checking  command [q] [f]
+2021/06/17 16:15:42 Checking command [&{BaseCommand:0xc00005c8c0 SourceDataId:courses.json}]
+2021/06/17 16:15:42 checking  command [q] [show courses]
+2021/06/17 16:15:42 Checking command [&{BaseCommand:0xc00005c960 SourceDataId:classes.json}]
+2021/06/17 16:15:42 checking  command [q] [show classes]
+2021/06/17 16:15:42 Checking command [&{BaseCommand:0xc00005cdc0 SourceDataId:classes.json}]
+2021/06/17 16:15:42 checking  command [q] [show course \w]
+2021/06/17 16:15:42 Checking command [&{BaseCommand:0xc00005c6e0}]
+2021/06/17 16:15:42 checking  command [q] [q]
+2021/06/17 16:15:42 Quitting application
+2021/06/17 17:57:29 checking  command [show window] [show window]
+2021/06/17 20:15:23 checking  command [show window] [show window]
+2021/06/17 20:15:23 Execute: {Context:0xc0001c0cc0 Command:{Args:[]}}
+2021/06/17 20:15:23 Error: template: template:1:14: executing "template" at <index .Command.Args 0>: error calling index: reflect: slice index out of range
+2021/06/17 20:15:23 exit status 1
+2021/06/17 20:16:15 checking  command [show window] [show window]
+2021/06/17 20:16:15 Execute: {Context:0xc0001c0cc0 Command:{Args:[]}}
+2021/06/17 20:16:15 Error: template: template:1:25: executing "template" at <.Data.Args>: can't evaluate field Data in type struct { Context interface {}; Command interface {} }
+2021/06/17 20:16:15 exit status 1
+2021/06/17 20:16:57 checking  command [show window] [show window]
+2021/06/17 20:16:57 Execute: {Context:0xc000190cc0 Command:{Args:[]}}
+2021/06/17 20:16:57 Error: template: template:1:25: executing "template" at <.Data.Args>: can't evaluate field Data in type struct { Context interface {}; Command interface {} }
+2021/06/17 20:16:57 exit status 1
+2021/06/17 20:20:56 checking  command [show window] [show window]
+2021/06/17 20:20:56 Execute: {Context:0xc0001f6c60 Command:{Args:[]}}
+2021/06/17 20:20:56 Error: template: template:1:25: executing "template" at <.Data.Args>: can't evaluate field Data in type struct { Context interface {}; Command interface {} }
+2021/06/17 20:20:56 exit status 1
+2021/06/17 20:26:51 checking  command [show window \w] [show window \w]
+2021/06/17 20:26:51 Execute: &{data:map[] pages:[] vPages:<nil> app:<nil>}
+2021/06/17 20:26:51 Error: template: template:1:28: executing "template" at <.Context.Args>: can't evaluate field Context in type *main.BaseAppContext
+2021/06/17 20:26:51 exit status 1
+2021/06/17 20:31:11 checking  command [show window \w] [show window \w]
+2021/06/17 20:31:11 Execute: &{data:map[] pages:[] vPages:<nil> app:<nil>}
+2021/06/17 20:31:11 Error: template: template:1:28: executing "template" at <.Context.args>: can't evaluate field Context in type *main.BaseAppContext
+2021/06/17 20:31:11 exit status 1
+2021/06/17 20:55:14 checking  command [show window \w] [show window \w]
+2021/06/17 20:55:14 Execute: {Context:map[]}
+2021/06/17 20:55:14 Error: template: template:1:14: executing "template" at <index .Context.args 0>: error calling index: index of untyped nil
+2021/06/17 20:55:14 exit status 1
+2021/06/17 21:01:19 checking  command [show window \w] [show window \w]
+2021/06/17 21:01:19 Execute: {Context:map[args:[shell_result.json]]}
+2021/06/17 21:01:19 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 21:01:19 EmptyFilter
+2021/06/17 21:01:19 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 21:01:19 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 21:01:19 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 21:01:19 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 21:01:19 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 21:01:19 JqFilter [&{code:0xc00005cc30}]
+2021/06/17 21:01:19 JqFilter data [[map[foo:hello] map[foo:there]]]
+2021/06/17 21:01:19 JqFilter results [[map[foo:hello]]]
+2021/06/17 21:04:04 checking  command [show window \w] [show window \w]
+2021/06/17 21:04:04 Execute: {Context:map[args:[shell_result.json]]}
+2021/06/17 21:04:04 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 21:04:04 EmptyFilter
+2021/06/17 21:04:04 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 21:04:04 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 21:04:04 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 21:04:04 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 21:04:04 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 21:04:04 JqFilter [&{code:0xc00005cc30}]
+2021/06/17 21:04:04 JqFilter data [[map[foo:hello] map[foo:there]]]
+2021/06/17 21:04:04 JqFilter results [[map[foo:hello]]]
+2021/06/17 21:04:38 checking  command [show window \w] [show window \w]
+2021/06/17 21:04:38 Execute: {Context:map[args:[shell_result.json]]}
+2021/06/17 21:04:38 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 21:04:38 EmptyFilter
+2021/06/17 21:04:38 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 21:04:38 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 21:04:38 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 21:04:38 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 21:04:38 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 21:04:38 JqFilter [&{code:0xc0000cebe0}]
+2021/06/17 21:04:38 JqFilter data [[map[foo:hello] map[foo:there]]]
+2021/06/17 21:04:38 JqFilter results [[map[foo:hello]]]
+2021/06/17 21:07:16 checking  command [show window shell_result.json] [show window \w]
+2021/06/17 21:07:16 Execute: {Context:map[args:[shell_result.json]]}
+2021/06/17 21:07:16 Filtering data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 21:07:16 EmptyFilter
+2021/06/17 21:07:16 Filtered data [map[results:[map[dept:ENG number:101] map[dept:ENG number:102 prerequisites:[map[dept:ENG number:101]]]]]]
+2021/06/17 21:07:16 Loading file [test/configs/simple-parent-detail/master.yml]
+2021/06/17 21:07:16 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 21:07:16 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 21:07:16 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 21:07:16 JqFilter [&{code:0xc00005cc30}]
+2021/06/17 21:07:16 JqFilter data [[map[foo:hello] map[foo:there]]]
+2021/06/17 21:07:16 JqFilter results [[map[foo:hello]]]
+2021/06/17 21:07:56 Loading file [./test/configs/simple-parent-detail/master.yml]
+2021/06/17 21:07:56 Loading file [test/configs/simple-parent-detail/pages/course-catalog.yaml]
+2021/06/17 21:07:56 Loading file [test/configs/simple-parent-detail/commands/course-catalog.yaml]
+2021/06/17 21:07:56 Loading file [test/configs/simple-parent-detail/data/courses.yaml]
+2021/06/17 21:07:56 Building page [course-catalog]
+2021/06/17 21:07:56 Building view [courses]
+2021/06/17 21:07:56 Finished building view [courses]
+2021/06/17 21:07:56 Building view [classes]
+2021/06/17 21:07:56 Finished building view [classes]
+2021/06/17 21:07:56 Building view [students]
+2021/06/17 21:07:56 Building  static view
+2021/06/17 21:07:56 Finished building view [students]
+2021/06/17 21:07:56 Finished building page [course-catalog]
+2021/06/17 21:07:56 Finished building all pages [[0xc000080640]]
+2021/06/17 21:07:56 Registering command [quit]
+2021/06/17 21:07:56 Registering command [page]
+2021/06/17 21:07:56 Registering command [focus]
+2021/06/17 21:07:56 Registering command [Retrieve courses]
+2021/06/17 21:07:56 Registering command [Retrieve classes]
+2021/06/17 21:07:56 Registering command [Show a course]
+2021/06/17 21:07:56 Building page layout [course-catalog]
+2021/06/17 21:07:56 Looking for page id [course-catalog]
+2021/06/17 21:07:56 Checking page id [course-catalog]
+2021/06/17 21:07:56 Found page [course-catalog]
+2021/06/17 21:07:56 Building layout
+2021/06/17 21:07:56 Building view layout [courses]
+2021/06/17 21:07:56 Finished view layout[courses]
+2021/06/17 21:07:56 Building container layout
+2021/06/17 21:07:56 Building layout
+2021/06/17 21:07:56 Building view layout [classes]
+2021/06/17 21:07:56 Finished view layout[classes]
+2021/06/17 21:07:56 Building view layout [students]
+2021/06/17 21:07:56 Finished view layout[students]
+2021/06/17 21:07:56 Finished layout
+2021/06/17 21:07:56 Finished container layout
+2021/06/17 21:07:56 Finished layout
+2021/06/17 21:07:56 Finished building page layout [&{Box:0xc0001e2820 items:[0xc0001d9860 0xc0001d9920] direction:1 fullScreen:false}] for page [&{Flex:0xc0001d9830 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc0001d8930 0xc0001d8fc0 0xc0001d66c0]}]
+2021/06/17 21:07:57 256, ':', 0
+2021/06/17 21:07:57 256, 's', 0
+2021/06/17 21:07:57 256, 'h', 0
+2021/06/17 21:07:57 256, 'o', 0
+2021/06/17 21:07:57 256, 'w', 0
+2021/06/17 21:07:57 256, ' ', 0
+2021/06/17 21:07:58 256, 'c', 0
+2021/06/17 21:07:58 256, 'o', 0
+2021/06/17 21:07:58 256, 'u', 0
+2021/06/17 21:07:58 256, 'r', 0
+2021/06/17 21:07:58 256, 's', 0
+2021/06/17 21:07:58 256, 'e', 0
+2021/06/17 21:07:58 256, ' ', 0
+2021/06/17 21:07:58 256, '1', 0
+2021/06/17 21:07:59 256, '0', 0
+2021/06/17 21:07:59 256, '0', 0
+2021/06/17 21:07:59 256, '1', 0
+2021/06/17 21:07:59 13, '\r', 0
+2021/06/17 21:07:59 Processing command [show course 1001]
+2021/06/17 21:07:59 Checking command [&{BaseCommand:0xc0000808c0 SourceDataId:courses.json}]
+2021/06/17 21:07:59 checking  command [show course 1001] [show courses]
+2021/06/17 21:07:59 Checking command [&{BaseCommand:0xc000080960 SourceDataId:classes.json}]
+2021/06/17 21:07:59 checking  command [show course 1001] [show classes]
+2021/06/17 21:07:59 Checking command [&{BaseCommand:0xc000080dc0 SourceDataId:classes.json}]
+2021/06/17 21:07:59 checking  command [show course 1001] [show course \w]
+2021/06/17 21:07:59 Passthru command [show course 1001]
+2021/06/17 21:07:59 Passthru command data [classes.json]
+2021/06/17 21:07:59 Passthru data [[map[class_id:1001 course_id:1001 location:ENG-256 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]] teacher:John Jones] map[class_id:1002 course_id:1001 location:ENG-103 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1003 course_id:1002 location:ENG-105 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1004 course_id:1002 location:ENG-210 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]]]]
+2021/06/17 21:07:59 Filtering data [[map[class_id:1001 course_id:1001 location:ENG-256 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]] teacher:John Jones] map[class_id:1002 course_id:1001 location:ENG-103 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1003 course_id:1002 location:ENG-105 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1004 course_id:1002 location:ENG-210 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]]]]
+2021/06/17 21:07:59 JqFilter [&{code:0xc000080d70}]
+2021/06/17 21:07:59 JqFilter data [[map[class_id:1001 course_id:1001 location:ENG-256 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]] teacher:John Jones] map[class_id:1002 course_id:1001 location:ENG-103 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1003 course_id:1002 location:ENG-105 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]] map[class_id:1004 course_id:1002 location:ENG-210 schedule:[map[Day:Mon End:9:30 Start:8:00] map[Day:Wed End:9:30 Start:8:00] map[Day:Fri End:9:30 Start:8:00]]]]]
+2021/06/17 21:07:59 JqFilter results [[]]
+2021/06/17 21:07:59 Filtered data [[]]
+2021/06/17 21:07:59 Passthru result [&{Type:0 Data:[] Key:courseInfo ViewId:classes}]
+2021/06/17 21:07:59 Command results: [[]]
+2021/06/17 21:07:59 Drawing table
+2021/06/17 21:07:59 Execute: {Context:0xc0001d9050 Command:<nil>}
+2021/06/17 21:07:59 Execute: {Context:0xc0001d9050 Command:<nil>}
+2021/06/17 21:07:59 Looking for page shortcut [cc]
+2021/06/17 21:07:59 Checking page shortcut [cc]
+2021/06/17 21:07:59 Found page [&{Flex:0xc0001d9830 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc0001d8930 0xc0001d8fc0 0xc0001d66c0]}]
+2021/06/17 21:07:59 Focusing on page [course-catalog]
+2021/06/17 21:07:59 Looking for page id [course-catalog]
+2021/06/17 21:07:59 Checking page id [course-catalog]
+2021/06/17 21:07:59 Found page [course-catalog]
+2021/06/17 21:07:59 Got page [&{Flex:0xc0001d9830 Id:course-catalog Name:Course Enrollment Shortcut:cc Views:[0xc0001d8930 0xc0001d8fc0 0xc0001d66c0]}]
+2021/06/17 21:07:59 Got page view  [&{Table:0xc0001dc000 BaseView:0xc0001d0500 dataPath:0xc0000acb30 columns:[0xc0001d63c0 0xc0001d6450]}]
+2021/06/17 21:07:59 Got page view  [&{Table:0xc0001dc0f0 BaseView:0xc0001d0740 dataPath:0xc0000acb70 columns:[0xc0001d6570 0xc0001d6600]}]
+2021/06/17 21:07:59 Found page view [&{Table:0xc0001dc0f0 BaseView:0xc0001d0740 dataPath:0xc0000acb70 columns:[0xc0001d6570 0xc0001d6600]}], setting focus
+2021/06/17 21:07:59 Got page view  [&{TextView:0xc0001ac100 BaseView:0xc0001d0780}]
+2021/06/17 21:09:12 256, ':', 0
+2021/06/17 21:09:12 256, 'q', 0
+2021/06/17 21:09:12 13, '\r', 0
+2021/06/17 21:09:12 Processing command [q]
+2021/06/17 21:09:12 Checking command [&{BaseCommand:0xc000080dc0 SourceDataId:classes.json}]
+2021/06/17 21:09:12 checking  command [q] [show course \w]
+2021/06/17 21:09:12 Checking command [&{BaseCommand:0xc0000806e0}]
+2021/06/17 21:09:12 checking  command [q] [q]
+2021/06/17 21:09:12 Quitting application

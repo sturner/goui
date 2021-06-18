@@ -1,0 +1,36 @@
+---
+   - name: "Class Enrollment"
+     id: class-catalog
+     shortcut: "cl"
+       
+     layout:
+         dir: row 
+         views:
+            - { viewId: classes, fixedSize: 0, proportion: 1 } 
+         containers:
+             - dir: col
+               fixedSize: 0
+               proportion: 1 
+               views:
+                  - { viewId: class-detail, fixedSize: 0, proportion: 1 } 
+                  - { viewId: student-detail, fixedSize: 0, proportion: 3 }
+
+     views:
+       - name: Classes
+         id: classes
+         shortcut: cl
+         dataPath: "$.Data.classes"
+         static: "static"
+
+       - name: Class Detail
+         id: class-detail
+         shortcut: cd
+         dataPath: "$.Data.classes"
+         static: "static"
+
+       - name: Student Detail
+         id: student-detail
+         shortcut: sd
+         dataPath: "$.Data.students"
+         static: "static"
+

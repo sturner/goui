@@ -1,0 +1,83 @@
+---
+
+ - id: "courses.json"
+   data: 
+      - department: ENG
+        number: 101
+        course_id: 1001
+
+      - department: ENG
+        number: 102
+        course_id: 1003
+        prerequisites: 
+           - course_id: 1001
+
+      - department: ENG
+        number: 201
+        course_id: 1002
+        prerequisites: 
+            - course_id: 1003
+
+      - department: ENG
+        number: 202
+        course_id: 1004
+        prerequisites: 
+           - course_id: 1002
+
+ - id: "classes.json"
+   data:
+       - class_id: 1001
+         course_id: 1001
+         location: ENG-256
+         teacher: John Jones
+         schedule:
+             - Day: Mon
+               Start: 8:00 
+               End: 9:30
+             - Day: Wed
+               Start: 8:00
+               End: 9:30
+             - Day: Fri
+               Start: 8:00
+               End: 9:30
+       - class_id: 1002
+         course_id: 1001
+         location: ENG-103
+         schedule:
+             - Day: Mon
+               Start: 8:00 
+               End: 9:30
+             - Day: Wed
+               Start: 8:00
+               End: 9:30
+             - Day: Fri
+               Start: 8:00
+               End: 9:30
+       - class_id: 1003
+         course_id: 1002
+         location: ENG-105
+         schedule:
+             - Day: Mon
+               Start: 8:00 
+               End: 9:30
+             - Day: Wed
+               Start: 8:00
+               End: 9:30
+             - Day: Fri
+               Start: 8:00
+               End: 9:30
+       - class_id: 1004
+         course_id: 1002
+         location: ENG-210
+         schedule:
+             - Day: Mon
+               Start: 8:00 
+               End: 9:30
+             - Day: Wed
+               Start: 8:00
+               End: 9:30
+             - Day: Fri
+               Start: 8:00
+               End: 9:30
+
+

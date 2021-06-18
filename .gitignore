@@ -16,7 +16,7 @@
 # vendor/
 
 ## The project binary
-./goui
+goui
 
 ### VIM #####
 

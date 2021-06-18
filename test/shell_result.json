@@ -1,5 +1,6 @@
 {
-    "results": [
+
+"results": [
         {
             "dept": "ENG",
             "number": 101
@@ -15,6 +16,4 @@
              ]
         }
      ]
-
-
 }

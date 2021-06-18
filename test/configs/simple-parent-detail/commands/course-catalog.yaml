@@ -1,6 +1,24 @@
 ---
    - name: "Retrieve courses"
      regex: "show courses"
-     shellExpression: "{{.env.CONFIG_DIR}}/ls.py"
-     resultType: "json" # or csv
+     resultType: "json" 
      resultKey:  "courses"
+     filterExpression: ""
+     sourceId: "courses.json"
+     viewId: courses
+
+   - name: "Retrieve classes"
+     regex: "show classes"
+     resultType: "json" 
+     resultKey:  "classes"
+     filterExpression: ""
+     sourceId: "classes.json"
+     viewId: classes
+     
+   - name: "Show a course"
+     regex: 'show course \w'
+     resultType: "json" 
+     resultKey:  "courseInfo"
+     filterExpression: ".[] | select(.course_id == $args[0])"
+     sourceId: "classes.json"
+     viewId: classes

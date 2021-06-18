@@ -1,27 +1,44 @@
 ---
    - name: "Course Enrollment"
      id: course-catalog
-     shortcut: "c"
+     shortcut: "cc"
        
      layout:
-         - container: { dir: column }
-           containers: 
-              - container: { dir: row }
-                views:
-                  - { view: courses, fixedSize: 0, proportion: 1 } 
-                  - { view: course-info, fixedSize: 0, proportion: 1 }
+         dir: col 
+         views:
+            - { viewId: courses, fixedSize: 0, proportion: 1 } 
+         containers:
+             - dir: row
+               fixedSize: 0
+               proportion: 1 
+               views:
+                  - { viewId: classes, fixedSize: 0, proportion: 2 } 
+                  - { viewId: students, fixedSize: 0, proportion: 1 }
 
      views:
        - name: Courses
          id: courses
-         shortcut: c
+         shortcut: co
+         dataPath: "$.Data.courses"
          table:
-           - headerExpression: "Course"
-             dataExpression:  "$.name"
-       - name: CourseStudents
+             - headerExpression: Department
+               dataExpression: "{{.department}}"
+             - headerExpression: Number
+               dataExpression: "{{.number}}"
+
+       - name: Classes
+         id: classes
+         shortcut: cl
+         dataPath: "$.Data.courseInfo"
+         table:
+             - headerExpression: Location
+               dataExpression: "{{.location}}"
+             - headerExpression: Teacher
+               dataExpression: "{{.teacher}}"
+
+       - name: Students
+         id: students
          shortcut: s
-         form:
-           orientation: h
-           labelExpression: "$.data"
-           dataExpression: "$.data"
+         dataPath: "$.Data.classes"
+         static: "static"
 
