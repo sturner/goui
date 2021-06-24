@@ -26,7 +26,7 @@ type ApplicationConfig struct {
 	Name     string          `yaml:"name"`
 	Pages    []PageConfig    `yaml:"pages"`
 	Commands []CommandConfig `yaml:"commands"`
-	Data     []DataConfig    `yaml:"data"`
+	Data     map[string]interface{}
 }
 
 type PageConfig struct {
@@ -131,12 +131,11 @@ func loadConfig(name string) (*ApplicationConfig, error) {
 	}
 	if FileExists(dataDir) {
 		err := loadFromDir(dataDir, func(file string) error {
-			var fileData []DataConfig
-			loadErr := LoadYamlFromFile(file, &fileData)
+			yamlData, loadErr := LoadGenericYamlFromFile(file)
 			if loadErr != nil {
 				return loadErr
 			}
-			app.Data = append(app.Data, fileData...)
+			app.Data = yamlData
 			return nil
 		})
 

@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"context"
 	"errors"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"text/template"
@@ -67,7 +66,7 @@ func (r *JsonPathEvaluator) Execute(data interface{}) (interface{}, error) {
 }
 
 type Filter interface {
-	Filter(data, ctx interface{}) interface{}
+	Filter(data interface{}, ctx AppContext) interface{}
 }
 
 type JqFilter struct {
@@ -77,7 +76,7 @@ type JqFilter struct {
 type EmptyFilter struct {
 }
 
-func (j *EmptyFilter) Filter(data, ctx interface{}) interface{} {
+func (j *EmptyFilter) Filter(data interface{}, ctx AppContext) interface{} {
 	log.Printf("EmptyFilter\n")
 	return data
 }
@@ -97,25 +96,57 @@ func NewJqFilter(expression string) Filter {
 	return &JqFilter{code: code}
 }
 
-func (j *JqFilter) Filter(data, ctx interface{}) interface{} {
-	log.Printf("JqFilter [%+v]\n", j)
+func (j *JqFilter) Filter(data interface{}, ctx AppContext) interface{} {
+	inputArgs := make([]interface{}, 0)
+	for _, input := range ctx.GetArguments() {
+		inputArgs = append(inputArgs, input)
+	}
+
+	log.Printf("JqFilter data type (%T) args (%T)\n", data, inputArgs)
 	results := make([]interface{}, 0)
-	log.Printf("JqFilter data [%+v]\n", data)
-	iter := j.code.Run(data, ctx)
+	iter := j.code.Run(data, inputArgs)
 	for {
 		v, ok := iter.Next()
 		if !ok {
 			break
 		}
 		if err, ok := v.(error); ok {
-			fmt.Println(err)
+			log.Printf("Error running jq filter: [%+v]\n", err)
 			continue
 		}
 		results = append(results, v)
 	}
-	log.Printf("JqFilter results [%+v]\n", results)
+	log.Printf("JqFilter results (%+v)\n", results)
 
 	return results
+}
+
+func LoadGenericYamlFromFile(file string) (map[string]interface{}, error) {
+	var yamlHolder interface{}
+	err := LoadYamlFromFile(file, &yamlHolder)
+
+	if err != nil {
+		return nil, err
+	}
+	jsonData := convert(yamlHolder)
+
+	return jsonData.(map[string]interface{}), nil
+}
+
+func convert(i interface{}) interface{} {
+	switch x := i.(type) {
+	case map[interface{}]interface{}:
+		m2 := map[string]interface{}{}
+		for k, v := range x {
+			m2[k.(string)] = convert(v)
+		}
+		return m2
+	case []interface{}:
+		for i, v := range x {
+			x[i] = convert(v)
+		}
+	}
+	return i
 }
 
 func LoadYamlFromFile(file string, holder interface{}) error {

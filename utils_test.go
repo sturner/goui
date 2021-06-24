@@ -24,23 +24,25 @@ func TestJsonPath(t *testing.T) {
 }
 
 func TestJqFilter(t *testing.T) {
-	filterExpression := ".[] | select(.foo == $args[0])"
+	data, err := LoadGenericYamlFromFile("test/configs/simple-parent-detail/data/courses.yaml")
+	if err != nil {
+		t.Errorf("Error loading YAML %+v\n", err)
+	}
+	ctx := &BaseAppContext{data: data, pages: nil, app: nil, vPages: nil}
+	ctx.RegisterArgs([]string{"ENG-256"})
+	t.Logf("Filter data %+v\n", data)
+	filterExpression := ".[] | select(.location == $args[0])"
 	t.Logf("Filter %+v\n", filterExpression)
 	filter := NewJqFilter(filterExpression)
 	t.Logf("Filter %+v\n", filter)
 
-	input := []interface{}{
-		map[string]interface{}{
-			"foo": "hello",
-		},
-		map[string]interface{}{
-			"foo": "there",
-		},
+	classData := data["classes.json"]
+
+	if _, ok := classData.([]map[string]interface{}); !ok {
+		t.Logf("It's not a list of maps\n")
 	}
 
-	ctx := []interface{}{"hello"}
-
-	results := filter.Filter(input, ctx)
+	results := filter.Filter(data["classes.json"], ctx)
 
 	t.Logf("Object Results %+v\n", results)
 

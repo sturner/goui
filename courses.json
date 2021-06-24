@@ -1,0 +1,25 @@
+[
+    {
+    "class_id": 1001,
+    "course_id": 1001,
+    "location": "ENG-256",
+    "teacher": "John Jones",
+    "schedule": [
+        {"Day": "Mon",
+         "Start": "8:00",
+         "End": "9:30"
+        },
+        {
+         "Day": "Wed",
+         "Start": "8:00",
+         "End": "9:30"
+        },
+        {
+        "Day": "Fri",
+        "Start": "8:00",
+        "End": "9:30"
+        }
+    ]
+    }
+]
+

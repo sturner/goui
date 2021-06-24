@@ -16,9 +16,9 @@
      viewId: classes
      
    - name: "Show a course"
-     regex: 'show course \w'
+     regex: 'show course (\w+)'
      resultType: "json" 
      resultKey:  "courseInfo"
-     filterExpression: ".[] | select(.course_id == $args[0])"
+     filterExpression: '.[] | select(.course_id == ($args[0] | tonumber))'
      sourceId: "classes.json"
      viewId: classes

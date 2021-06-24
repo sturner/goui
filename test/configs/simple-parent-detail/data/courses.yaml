@@ -1,7 +1,4 @@
----
-
- - id: "courses.json"
-   data: 
+courses.json:
       - department: ENG
         number: 101
         course_id: 1001
@@ -24,8 +21,7 @@
         prerequisites: 
            - course_id: 1002
 
- - id: "classes.json"
-   data:
+classes.json:
        - class_id: 1001
          course_id: 1001
          location: ENG-256
@@ -42,6 +38,7 @@
                End: 9:30
        - class_id: 1002
          course_id: 1001
+         teacher: Bill Henry
          location: ENG-103
          schedule:
              - Day: Mon
@@ -56,6 +53,7 @@
        - class_id: 1003
          course_id: 1002
          location: ENG-105
+         teacher: Alice Mack
          schedule:
              - Day: Mon
                Start: 8:00 
@@ -68,6 +66,7 @@
                End: 9:30
        - class_id: 1004
          course_id: 1002
+         teacher: Sean Freeman
          location: ENG-210
          schedule:
              - Day: Mon
@@ -79,5 +78,4 @@
              - Day: Fri
                Start: 8:00
                End: 9:30
-
 

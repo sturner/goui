@@ -98,10 +98,15 @@ func (b *BaseCommand) ParseAndFilterString(data string, ctx AppContext) (*Comman
 }
 
 func (b *BaseCommand) GetArguments(cmdText string) []string {
-	matches := b.regex.FindAllStringSubmatchIndex(cmdText, -1)
-	cmdEndIndex := matches[0][1]
-	cmdArray := SpaceSplitter.Split(cmdText[cmdEndIndex+1:len(cmdText)], -1)
-	return cmdArray
+	result := make([]string, 0)
+	log.Printf("Getting command arguments [%s]\n", cmdText)
+	matches := b.regex.FindStringSubmatch(cmdText)
+	argsLen := len(matches)
+	if argsLen > 0 {
+		return matches[1:]
+	}
+	log.Printf("Got arguments [%+v]\n", result)
+	return result
 }
 
 func (b *BaseCommand) ParseAndFilter(data interface{}, ctx AppContext) (*CommandResult, error) {
@@ -149,10 +154,7 @@ func (p *PassthruCommand) Execute(cmdText string, ctx AppContext) (*CommandResul
 	log.Printf("Passthru command [%s]\n", cmdText)
 	log.Printf("Passthru command data [%s]\n", p.SourceDataId)
 	data := ctx.GetData(p.SourceDataId)
-	log.Printf("Passthru data [%+v]\n", data)
-	result, err := p.ParseAndFilter(data, ctx)
-	log.Printf("Passthru result [%+v]\n", result)
-	return result, err
+	return p.ParseAndFilter(data, ctx)
 }
 
 func NewPassthruCommand(name string, resultType int, resultKey, cmdExpression, filterExpression, viewId, sourceDataId string) Command {

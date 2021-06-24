@@ -239,15 +239,8 @@ func (b *BaseAppContext) GetArguments() []string {
 
 func BuildAppContext(config *ApplicationConfig, app *tview.Application, rootPages *tview.Pages) AppContext {
 	pages := createPagesFromConfig(config)
-	baseContext := &BaseAppContext{data: make(map[string]interface{}), pages: pages, app: app, vPages: rootPages}
-	PopulateContextData(config, baseContext)
+	baseContext := &BaseAppContext{data: config.Data, pages: pages, app: app, vPages: rootPages}
 	return baseContext
-}
-
-func PopulateContextData(config *ApplicationConfig, ctx *BaseAppContext) {
-	for _, d := range config.Data {
-		ctx.data[d.Id] = d.Data
-	}
 }
 
 func BuildLayoutFromConfig(config *ApplicationConfig, ctx AppContext, rootPages *tview.Pages) {
