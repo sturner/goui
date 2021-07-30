@@ -42,8 +42,9 @@ func NewBaseView(id, name, shortcut string) *BaseView {
 type Table struct {
 	*tview.Table
 	*BaseView
-	dataPath *JsonPathEvaluator
-	columns  []*TableColumn
+	dataPath         *JsonPathEvaluator
+	selectExpression *TemplateEvaluator
+	columns          []*TableColumn
 }
 
 type TableColumn struct {
@@ -68,12 +69,21 @@ func (t *Table) DrawView(appCtx AppContext) {
 		for x, col := range t.columns {
 			dataValue := col.dataTemplate.Execute(row)
 			t.SetCellSimple(j+1, x, dataValue)
+			cell := t.GetCell(j+1, x)
+			cell.Reference = row
 		}
 	}
 	t.SetFixed(1, len(t.columns))
-	//func (r *JsonPathEvaluator) ExecuteWithCtx(ctx AppContext, data interface{}) (interface{}, error) {
-	//t.SetCellSimple(row, column int, text string)
 
+}
+
+func (t *Table) HandleSelect(row, column int) {
+
+	if t.selectExpression != nil {
+		cell := t.GetCell(row, column)
+		cmd := t.selectExpression.ExecuteWithDataAndCtx(cell.Reference, MainContext)
+		log.Printf("Selected command [%s]\n", cmd)
+	}
 }
 
 func NewTableColumn(headerExpression, dataExpression string) *TableColumn {
@@ -81,23 +91,28 @@ func NewTableColumn(headerExpression, dataExpression string) *TableColumn {
 		NewTemplateEvaluator(dataExpression)}
 }
 
-func NewTable(id, name, shortcut, dataPath string, columns []*TableColumn) *Table {
+func NewTable(id, name, shortcut, dataPath string, columns []*TableColumn, selectExpression string) *Table {
 	tbl := tview.NewTable()
 	tbl.SetBorder(true)
 	tbl.SetTitle(name + "(" + shortcut + ")")
 	jsonPath := NewJsonPathEvaluator(dataPath)
 	baseView := NewBaseView(id, name, shortcut)
-	return &Table{Table: tbl, BaseView: baseView, dataPath: jsonPath, columns: columns}
+	newTable := &Table{Table: tbl, BaseView: baseView, dataPath: jsonPath, columns: columns}
+	newTable.Table.SetSelectedFunc(newTable.HandleSelect)
+	if len(selectExpression) > 0 {
+		newTable.selectExpression = NewTemplateEvaluator(selectExpression)
+	}
+	return newTable
 }
 
-func NewTableFromConfig(id, name, shortcut, dataPath string, columnConfig []TableItemConfig) *Table {
+func NewTableFromConfig(id, name, shortcut, dataPath string, tableConfig TableConfig) *Table {
 	columns := make([]*TableColumn, 0)
-	for _, colConf := range columnConfig {
+	for _, colConf := range tableConfig.Columns {
 		col := &TableColumn{headerTemplate: NewTemplateEvaluator(colConf.HeaderExpression),
 			dataTemplate: NewTemplateEvaluator(colConf.DataExpression)}
 		columns = append(columns, col)
 	}
-	return NewTable(id, name, shortcut, dataPath, columns)
+	return NewTable(id, name, shortcut, dataPath, columns, tableConfig.SelectExpression)
 }
 
 type Placeholder struct {
@@ -116,4 +131,55 @@ func NewPlaceholder(id, name, shortcut, dataPath string) *Placeholder {
 	textView.SetTitle(name + "(" + shortcut + ")")
 	baseView := NewBaseView(id, name, shortcut)
 	return &Placeholder{TextView: textView, BaseView: baseView}
+}
+
+type DataForm struct {
+	*tview.Grid
+	*BaseView
+	fields []*DataFormField
+}
+
+type DataFormField struct {
+	id            string
+	labelTemplate *TemplateEvaluator
+	valueTemplate *TemplateEvaluator
+	field         *LabelValue
+}
+
+func (t *DataForm) DrawView(appCtx AppContext) {
+	for _, field := range t.fields {
+		label := field.labelTemplate.ExecuteWithCtx(appCtx)
+		value := field.valueTemplate.ExecuteWithCtx(appCtx)
+		field.field.SetLabel(label)
+		field.field.SetValue(value)
+	}
+}
+
+func NewDataForm(id, name, shortcut string, config DataFormConfig) *DataForm {
+	grid := tview.NewGrid()
+	grid.SetBorder(true)
+	grid.SetTitle(name + "(" + shortcut + ")")
+	baseView := NewBaseView(id, name, shortcut)
+
+	log.Printf("Drawing DataForm\n")
+
+	fields := make([]*DataFormField, 0)
+	for _, labelConfig := range config.Fields {
+
+		log.Printf("Drawing Label %s \n", labelConfig.Id)
+		dir := LabelHorizontal
+		if labelConfig.Orientation == "v" {
+			dir = LabelVertical
+		}
+
+		labelTemplate := NewTemplateEvaluator(labelConfig.LabelExpression)
+		valueTemplate := NewTemplateEvaluator(labelConfig.ValueExpression)
+		labelValue := NewLabelValue(dir)
+		grid.AddItem(labelValue, labelConfig.X, labelConfig.Y, 1, 1, -1, -1, false)
+		fields = append(fields, &DataFormField{id: labelConfig.Id, labelTemplate: labelTemplate,
+			valueTemplate: valueTemplate, field: labelValue})
+
+	}
+
+	return &DataForm{BaseView: baseView, Grid: grid, fields: fields}
 }

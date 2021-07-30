@@ -19,12 +19,10 @@ type LabelValue struct {
 	value     string
 }
 
-func NewLabelValue(direction int, label, value string) *LabelValue {
+func NewLabelValue(direction int) *LabelValue {
 	return &LabelValue{
 		Box:       tview.NewBox(),
 		direction: direction,
-		label:     label,
-		value:     value,
 	}
 }
 
@@ -32,18 +30,17 @@ func (r *LabelValue) SetLabel(label string) {
 	r.label = label
 }
 
+func (r *LabelValue) GetLabel() string {
+	return r.label
+}
+
 func (r *LabelValue) SetValue(value string) {
 	r.value = value
 }
 
-/*
-func (r *LabelValue) SetValueColor(color int ) {
-     r.valueColor = color
+func (r *LabelValue) GetValue() string {
+	return r.value
 }
-func (r *LabelValue) SetLabelColor(color int) {
-     r.labelColor = color
-}
-*/
 
 func (r *LabelValue) Draw(screen tcell.Screen) {
 	r.Box.DrawForSubclass(screen, r)

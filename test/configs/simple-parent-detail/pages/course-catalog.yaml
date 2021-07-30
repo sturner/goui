@@ -13,7 +13,7 @@
                proportion: 1 
                views:
                   - { viewId: classes, fixedSize: 0, proportion: 2 } 
-                  - { viewId: students, fixedSize: 0, proportion: 1 }
+                  - { viewId: class, fixedSize: 0, proportion: 1 }
 
      views:
        - name: Courses
@@ -21,6 +21,8 @@
          shortcut: co
          dataPath: "$.Data.courses"
          table:
+           selectExpression: "show course {{ .Data.course_id }}"
+           columns: 
              - headerExpression: Department
                dataExpression: "{{.department}}"
              - headerExpression: Number
@@ -31,14 +33,39 @@
          shortcut: cl
          dataPath: "$.Data.courseInfo"
          table:
+           columns:
              - headerExpression: Location
                dataExpression: "{{.location}}"
              - headerExpression: Teacher
                dataExpression: "{{.teacher}}"
 
-       - name: Students
-         id: students
-         shortcut: s
-         dataPath: "$.Data.classes"
-         static: "static"
+       - name: Class
+         id: class
+         shortcut: c
+         form:
+           fields:
+              - id: teacher
+                x: 0
+                y: 0
+                orientation: v
+                labelExpression: "Teacher"
+                labelWidth: 20
+                valueExpression: "{{ (index .Context.class 0).teacher}}"
+                valueWidth: 20
+              - id: location
+                x: 0
+                y: 1
+                orientation: v
+                labelExpression: "Location"
+                labelWidth: 20
+                valueExpression: "{{ (index .Context.class 0).location}}"
+                valueWidth: 20
+              - id: capacity
+                x: 1
+                y: 1
+                orientation: v
+                labelExpression: "Capacity"
+                labelWidth: 10
+                valueExpression: "{{ (index .Context.class 0).capacity}}"
+                valueWidth: 10 
 

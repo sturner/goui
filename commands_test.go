@@ -13,7 +13,8 @@ func TestShellCommandRegex(t *testing.T) {
 	ctx.RegisterArgs(args)
 	cmdRegex := "show window \\w"
 	cmdText := "show window shell_result.json"
-	cmd := NewShellCommand("name", OutputJson, "result", cmdRegex, "", "view", "cat  ./test/{{index .Context.args 0}}")
+	cmdConfig := CommandConfig{Name: "name", ResultType: "json", ResultKey: "result", Regex: cmdRegex, FilterExpression: "", ViewId: "view"}
+	cmd := NewShellCommand(cmdConfig, "cat  ./test/{{index .Context.args 0}}")
 	fmt.Printf("New shell command")
 	canProcess := cmd.CanProcess(cmdText)
 	if !canProcess {

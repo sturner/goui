@@ -22,6 +22,16 @@ type JsonPathEvaluator struct {
 	expression gval.Evaluable
 }
 
+func (r *TemplateEvaluator) ExecuteWithDataAndCtx(data interface{}, ctx AppContext) string {
+	argData := struct {
+		Context interface{}
+		Data    interface{}
+	}{
+		ctx.GetDataMap(),
+		data,
+	}
+	return r.Execute(argData)
+}
 func (r *TemplateEvaluator) ExecuteWithCtx(ctx AppContext) string {
 	argData := struct {
 		Context interface{}

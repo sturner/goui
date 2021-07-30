@@ -6,6 +6,7 @@ require (
 	github.com/PaesslerAG/gval v1.1.1
 	github.com/PaesslerAG/jsonpath v0.1.0
 	github.com/gdamore/tcell/v2 v2.2.1
+	github.com/go-resty/resty/v2 v2.6.0
 	github.com/itchyny/gojq v0.12.4
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/rivo/tview v0.0.0-20210427112837-09cec83b1732

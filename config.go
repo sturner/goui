@@ -11,15 +11,30 @@ import (
 )
 
 type CommandConfig struct {
-	Name             string `yaml:"name"`
-	Regex            string `yaml:"regex"`
-	ResultType       string `yaml:"resultType"`
-	ResultKey        string `yaml:"resultKey"`
-	FilterExpression string `yaml:"filterExpression"`
-	ShellExpression  string `yaml:"shellExpression"`
-	PassthruSourceId string `yaml:"sourceId"`
-	Static           string `yaml:"static"`
-	ViewId           string `yaml:"viewId"`
+	Name             string     `yaml:"name"`
+	Regex            string     `yaml:"regex"`
+	ResultType       string     `yaml:"resultType"`
+	ResultKey        string     `yaml:"resultKey"`
+	FilterExpression string     `yaml:"filterExpression"`
+	ShellExpression  string     `yaml:"shellExpression"`
+	PassthruSourceId string     `yaml:"sourceId"`
+	RestSourceConfig string     `yaml:"restSource"`
+	Static           string     `yaml:"static"`
+	ViewId           string     `yaml:"viewId"`
+	Help             HelpConfig `yaml:"help"`
+}
+
+type HelpConfig struct {
+	Syntax      string `yaml:"syntax"`
+	Description string `yaml:"description"`
+}
+
+type RestSourceConfig struct {
+	GetUrlExpression   string `yaml:"getUrlExpression"`
+	TokenExpression    string `yaml:"tokenExpression"`
+	AuthScheme         string `yaml:"authScheme"`
+	Username           string `yaml:"username"`
+	PasswordExpression string `yaml:"passwordExpression"`
 }
 
 type ApplicationConfig struct {
@@ -62,24 +77,34 @@ type TableItemConfig struct {
 	DataExpression   string `yaml:"dataExpression"`
 }
 
-type FormItemConfig struct {
+type DataFormConfig struct {
+	Fields []DataFormFieldConfig `yaml:"fields"`
+}
+
+type DataFormFieldConfig struct {
+	Id              string `yaml:"id"`
 	X               int    `yaml:"x"`
 	Y               int    `yaml:"y"`
 	Orientation     string `yaml:"orientation"` // v - vertical, h - horizontal
 	LabelExpression string `yaml:"labelExpression"`
 	LabelWidth      int    `yaml:"labelWidth"`
-	ValueExpression string `yaml:valueExpression"`
+	ValueExpression string `yaml:"valueExpression"`
 	ValueWidth      int    `yaml:"valueWidth"`
 }
 
 type ViewConfig struct {
-	Id       string            `yaml:"id"`
-	Name     string            `yaml:"name"`
-	Shortcut string            `yaml:"shortcut"`
-	DataPath string            `yaml:"dataPath"`
-	Table    []TableItemConfig `yaml:"table"`
-	Form     []FormItemConfig  `yaml:"form"`
-	Static   string            `yaml:"static"`
+	Id       string         `yaml:"id"`
+	Name     string         `yaml:"name"`
+	Shortcut string         `yaml:"shortcut"`
+	DataPath string         `yaml:"dataPath"`
+	Table    TableConfig    `yaml:"table"`
+	Form     DataFormConfig `yaml:"form"`
+	Static   string         `yaml:"static"`
+}
+
+type TableConfig struct {
+	SelectExpression string            `yaml:"selectExpression"`
+	Columns          []TableItemConfig `yaml:"columns"`
 }
 
 type DataConfig struct {

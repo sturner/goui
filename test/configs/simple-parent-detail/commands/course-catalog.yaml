@@ -6,14 +6,21 @@
      filterExpression: ""
      sourceId: "courses.json"
      viewId: courses
+     help: 
+        syntax: show courses
+        description: Show all courses available
 
    - name: "Retrieve classes"
-     regex: "show classes"
+     regex: 'show class (\w+)'
      resultType: "json" 
-     resultKey:  "classes"
-     filterExpression: ""
+     resultKey:  "class"
+     filterExpression: '.[] | select(.class_id == ($args[0] | tonumber))'
      sourceId: "classes.json"
-     viewId: classes
+     viewId: class
+     help: 
+        syntax: show classes
+        description: Show all classes
+        
      
    - name: "Show a course"
      regex: 'show course (\w+)'
@@ -22,3 +29,7 @@
      filterExpression: '.[] | select(.course_id == ($args[0] | tonumber))'
      sourceId: "classes.json"
      viewId: classes
+     help: 
+        syntax: show course <course-id>
+        description: Show the course with the id <course-id>
+

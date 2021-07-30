@@ -15,6 +15,7 @@ const Row = "row"
 const Col = "col"
 
 var configMaster string
+var MainContext AppContext
 
 func init() {
 	file, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
@@ -41,6 +42,7 @@ func main() {
 	rootPages := tview.NewPages()
 	app := tview.NewApplication()
 	appContext := BuildAppContext(appConfig, app, rootPages)
+	MainContext = appContext
 	controller := NewController(appContext, appConfig)
 	BuildLayoutFromConfig(appConfig, appContext, rootPages)
 	rootPages.SwitchToPage(appConfig.Pages[0].Id)
@@ -96,32 +98,14 @@ func createPagesFromConfig(config *ApplicationConfig) []*Page {
 
 func createViewFromConfig(viewConfig ViewConfig) View {
 
-	if len(viewConfig.Table) > 0 {
+	if len(viewConfig.Table.Columns) > 0 {
 		return NewTableFromConfig(viewConfig.Id, viewConfig.Name, viewConfig.Shortcut, viewConfig.DataPath, viewConfig.Table)
 	} else if len(viewConfig.Static) > 0 {
-		log.Printf("Building  static view")
 		return NewPlaceholder(viewConfig.Id, viewConfig.Name, viewConfig.Shortcut, viewConfig.DataPath)
+	} else if len(viewConfig.Form.Fields) > 0 {
+		return NewDataForm(viewConfig.Id, viewConfig.Name, viewConfig.Shortcut, viewConfig.Form)
 	}
 	return nil
-}
-
-func createPages() *tview.Flex {
-	horLabel := NewLabelValue(LabelHorizontal, "Label", "Value")
-	horLabel.SetBorder(true)
-	horLabel.SetTitle("Courses")
-
-	vertLabel := NewLabelValue(LabelVertical, "Label", "Value")
-	vertLabel.SetBorder(true)
-	vertLabel.SetTitle("Course Info")
-
-	flex := tview.NewFlex().
-		AddItem(tview.NewFlex().SetDirection(tview.FlexRow).
-			AddItem(horLabel, 0, 2, false).
-			AddItem(vertLabel, 0, 1, false), 0, 1, false).
-		AddItem(tview.NewFlex().SetDirection(tview.FlexRow).
-			AddItem(tview.NewBox().SetBorder(true).SetTitle("Students"), 0, 2, false).
-			AddItem(tview.NewBox().SetBorder(true).SetTitle("Student Info"), 0, 1, false), 0, 1, false)
-	return flex
 }
 
 type AppContext interface {
@@ -203,6 +187,7 @@ func (b *BaseAppContext) SwitchPage(pageShortcut string) {
 
 func (b *BaseAppContext) FocusOnViewId(viewId string) {
 	v, p := b.GetView(viewId)
+	log.Printf("Focus on  page :[%+v] - view [%+v]\n", p, v)
 	b.SwitchPage(p.Shortcut)
 	b.FocusOnViewShortcut(v.GetShortcut())
 
@@ -402,5 +387,4 @@ func (i *InputHandler) InputCapture(event *tcell.EventKey) *tcell.EventKey {
 		i.inputView.SetText(i.buffer.String())
 		return nil
 	}
-	return event
 }

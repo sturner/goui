@@ -30,6 +30,7 @@ type Command interface {
 	GetResultType() int
 	GetResultKey() string
 	GetViewId() string
+	GetHelp() HelpConfig
 }
 
 type CommandResult struct {
@@ -59,8 +60,23 @@ type BaseCommand struct {
 	resultKey  string
 	filter     Filter
 	viewId     string
+	help       HelpConfig
 }
 
+func newBaseCommand(config CommandConfig) *BaseCommand {
+	regex := regexp.MustCompile(config.Regex)
+	var filter Filter
+	if len(config.FilterExpression) > 0 {
+		filter = NewJqFilter(config.FilterExpression)
+	} else {
+		filter = &EmptyFilter{}
+	}
+	return &BaseCommand{Name: config.Name, regex: regex, resultType: getResultType(config.ResultType),
+		resultKey: config.ResultKey, filter: filter, viewId: config.ViewId, help: config.Help}
+
+}
+
+/*
 func newBaseCommand(name string, resultType int, resultKey, cmdExpression, filterExpression, viewId string) *BaseCommand {
 	regex := regexp.MustCompile(cmdExpression)
 	var filter Filter
@@ -71,6 +87,7 @@ func newBaseCommand(name string, resultType int, resultKey, cmdExpression, filte
 	}
 	return &BaseCommand{Name: name, regex: regex, resultType: resultType, resultKey: resultKey, filter: filter, viewId: viewId}
 }
+*/
 
 func (r *BaseCommand) GetName() string {
 	return r.Name
@@ -120,6 +137,10 @@ func (b *BaseCommand) ParseAndFilter(data interface{}, ctx AppContext) (*Command
 	return nil, nil
 }
 
+func (b *BaseCommand) GetHelp() HelpConfig {
+	return b.help
+}
+
 type ShellCommand struct {
 	*BaseCommand
 	template *TemplateEvaluator
@@ -140,9 +161,9 @@ func (r *ShellCommand) Execute(cmdText string, ctx AppContext) (*CommandResult, 
 
 }
 
-func NewShellCommand(name string, resultType int, resultKey, cmdExpression, filterExpression, viewId, shellExpression string) Command {
+func NewShellCommand(config CommandConfig, shellExpression string) Command {
 	shellExp := NewTemplateEvaluator(shellExpression)
-	return &ShellCommand{newBaseCommand(name, resultType, resultKey, cmdExpression, filterExpression, viewId), shellExp}
+	return &ShellCommand{newBaseCommand(config), shellExp}
 }
 
 type PassthruCommand struct {
@@ -157,8 +178,8 @@ func (p *PassthruCommand) Execute(cmdText string, ctx AppContext) (*CommandResul
 	return p.ParseAndFilter(data, ctx)
 }
 
-func NewPassthruCommand(name string, resultType int, resultKey, cmdExpression, filterExpression, viewId, sourceDataId string) Command {
-	return &PassthruCommand{newBaseCommand(name, resultType, resultKey, cmdExpression, filterExpression, viewId), sourceDataId}
+func NewPassthruCommand(config CommandConfig, sourceDataId string) Command {
+	return &PassthruCommand{newBaseCommand(config), sourceDataId}
 }
 
 type CommandProcessor struct {
@@ -179,11 +200,10 @@ func (c *CommandProcessor) Process(cmd string, appCtx AppContext) (*CommandResul
 }
 
 func CreateCommand(config CommandConfig) Command {
-	resultType := getResultType(config.ResultType)
 	if len(config.ShellExpression) > 0 {
-		return NewShellCommand(config.Name, resultType, config.ResultKey, config.Regex, config.FilterExpression, config.ViewId, config.ShellExpression)
+		return NewShellCommand(config, config.ShellExpression)
 	}
-	return NewPassthruCommand(config.Name, resultType, config.ResultKey, config.Regex, config.FilterExpression, config.ViewId, config.PassthruSourceId)
+	return NewPassthruCommand(config, config.PassthruSourceId)
 }
 
 func getResultType(resultType string) int {
@@ -230,7 +250,8 @@ func (q *QuitCommand) Execute(cmdText string, ctx AppContext) (*CommandResult, e
 }
 
 func NewQuitCommand() Command {
-	return &QuitCommand{newBaseCommand("quit", OutputNone, "", "q", "", "")}
+	config := CommandConfig{Name: "quit", Regex: "q", ResultType: "", FilterExpression: "", ViewId: ""}
+	return &QuitCommand{newBaseCommand(config)}
 }
 
 type PageCommand struct {
@@ -239,15 +260,15 @@ type PageCommand struct {
 
 func (q *PageCommand) Execute(cmdText string, ctx AppContext) (*CommandResult, error) {
 	args := ctx.GetArguments()
-	log.Printf("Processing page command [%s]\n", cmdText)
 	pageId := args[0]
-	log.Printf("Switching page command [%s]\n", pageId)
+	log.Printf("Processing page command [%s] - [%s]\n", cmdText, args[0])
 	ctx.SwitchPage(pageId)
 	return nil, nil
 }
 
 func NewPageCommand() Command {
-	return &PageCommand{newBaseCommand("page", OutputNone, "", "p \\w", "", "")}
+	config := CommandConfig{Name: "page", Regex: "p \\w+", ResultType: "", FilterExpression: "", ViewId: ""}
+	return &PageCommand{newBaseCommand(config)}
 }
 
 type FocusCommand struct {
@@ -256,13 +277,14 @@ type FocusCommand struct {
 
 func (q *FocusCommand) Execute(cmdText string, ctx AppContext) (*CommandResult, error) {
 	results := strings.Split(cmdText, " ")
-	log.Printf("Processing focus command [%s]\n", cmdText)
-	viewShortcut := results[0]
-	log.Printf("Switching focus command [%s]\n", viewShortcut)
+	viewShortcut := results[1]
+	log.Printf("Processing focus command [%s] - [%s]\n", cmdText, viewShortcut)
 	ctx.FocusOnViewShortcut(viewShortcut)
 	return nil, nil
 }
 
 func NewFocusCommand() Command {
-	return &FocusCommand{newBaseCommand("focus", OutputNone, "", "f \\w", "", "")}
+	config := CommandConfig{Name: "focus", Regex: "f \\w+", ResultType: "", FilterExpression: "", ViewId: ""}
+	return &FocusCommand{newBaseCommand(config)}
+
 }

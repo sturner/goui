@@ -26,6 +26,7 @@ classes.json:
          course_id: 1001
          location: ENG-256
          teacher: John Jones
+         capacity: 20
          schedule:
              - Day: Mon
                Start: 8:00 
@@ -40,6 +41,7 @@ classes.json:
          course_id: 1001
          teacher: Bill Henry
          location: ENG-103
+         capacity: 20
          schedule:
              - Day: Mon
                Start: 8:00 
@@ -54,6 +56,7 @@ classes.json:
          course_id: 1002
          location: ENG-105
          teacher: Alice Mack
+         capacity: 30
          schedule:
              - Day: Mon
                Start: 8:00 
@@ -68,6 +71,7 @@ classes.json:
          course_id: 1002
          teacher: Sean Freeman
          location: ENG-210
+         capacity: 30
          schedule:
              - Day: Mon
                Start: 8:00 
